@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" tiledversion="1.0.1" orientation="orthogonal" renderorder="right-down" width="240" height="15" tilewidth="16" tileheight="16" nextobjectid="28">
+ <tileset firstgid="1" source="mapstuff.tsx"/>
+ <layer name="background" width="240" height="15">
+  <data encoding="base64" compression="zlib">
+   eJztw7ENAAAMAiCHTv5/sH80kNBLqqqqqqqqqqqqqqqqqqq+OupNxOE=
+  </data>
+ </layer>
+ <layer name="graphics" width="240" height="15">
+  <data encoding="base64" compression="zlib">
+   eJztWUlSwzAQdJWdPII1gfyDNdsVvgAXEnLOA+AAF7Kcs5w5wB/yAT5DFduFccWqEkJRRpZGchJPVR9I4u4eyV1ji3EUBBPAVIKx4ru0oOB0ye+zL0pMJDoTj+uZ1X3ImkfdPTa5N9JeT+3P9J6n0hX5XdyXshxnHa7uL1s+bVyv4pL9Lk3eXa/Numq76I3PwNSh7qqtU1Z8sn0qF4LgwCMo9V32VnKsl69PtnUpPRxCbisJavB33SMo9V32VnWsl69PtnXJPEBmGwmagKzWRxgEn4AvwDfgJ/TtiL589Wyqi7l+E/dTVuUizNCi+jcXsDaXwvrcQFZbgDbgdgXyuwPedgF7gH1AKcNebZWvnk11Mddv4n7KqgbZrS/Jb1zdJL/V+Bk5ms/dHqAPGKxAfk/A2yngDHAezftY9/LVs6ku5vpN3E9ZtSC7bUR+R0l++bnLMttcgfzmldc6Fja/syS/T9zcjZ+bOwl087sF787bhXSeXXLa1NZ9Z1vGSd0v47f9rulyn2xpUXo24VY9P/PPyux8mZ+5MYYJ2Od3gHtEjo/A7zHCM5ZPh5OiFmnz/nXf2URO8RyCul/GL/qWnYek4XVRabRk/VF6NuFeNH/57DY48DO3E/09e2bz9xmRtyvwe430jOHT5dQpzPxRaTP/uu9sMs5uqP7eZjF+me+uQX6pfdvQEvuj9GzCLZu/fHbZ+TLDgJu5Q+7zDpffN0TeHsDvI9Izhk+XU6cwc1OljfWP4RyF6u9tlop/ZJBfat82tMT+KD2bcMvmr3hGNUBgyOX3HXG/voDfV6RnDJ8up05h5qZKG+sfwzkL1d/bLBX/zCC/1L5taIn9UXo24e5BdvtCfhedUWFQyZEjh1ew/+kOo//Py8vwCxvFCEU=
+  </data>
+ </layer>
+ <objectgroup name="plants">
+  <object id="1" x="3" y="163" width="28" height="60"/>
+  <object id="2" x="163" y="148" width="24" height="77"/>
+  <object id="3" x="321" y="156" width="33" height="68"/>
+  <object id="4" x="500" y="151" width="24" height="73"/>
+  <object id="5" x="998" y="152" width="21" height="73"/>
+  <object id="6" x="1093" y="159" width="26" height="63"/>
+  <object id="7" x="1331" y="152" width="26" height="74"/>
+  <object id="8" x="1394" y="156" width="30" height="67"/>
+  <object id="9" x="1461" y="150" width="22" height="75"/>
+  <object id="10" x="1845" y="151" width="21" height="73"/>
+  <object id="11" x="1940" y="155" width="31" height="68"/>
+  <object id="12" x="2198" y="152" width="22" height="73"/>
+  <object id="13" x="2629" y="150" width="22" height="75"/>
+  <object id="14" x="2834" y="158" width="32" height="66"/>
+  <object id="15" x="2916" y="152" width="24" height="72"/>
+  <object id="16" x="3286" y="149" width="20" height="77"/>
+ </objectgroup>
+ <objectgroup name="ground">
+  <object id="17" x="1" y="224" width="3600" height="18"/>
+ </objectgroup>
+ <objectgroup name="finish">
+  <object id="19" x="3517" y="-1" width="40" height="226"/>
+ </objectgroup>
+ <objectgroup name="obstacle">
+  <object id="20" x="2321" y="85" width="66" height="35"/>
+  <object id="21" x="2466" y="86" width="66" height="32"/>
+  <object id="22" x="2067" y="86" width="64" height="33"/>
+  <object id="23" x="1873" y="147" width="65" height="36"/>
+  <object id="24" x="1588" y="87" width="65" height="31"/>
+  <object id="25" x="1136" y="147" width="68" height="40"/>
+  <object id="26" x="849" y="182" width="69" height="33"/>
+  <object id="27" x="610" y="86" width="66" height="34"/>
+ </objectgroup>
+</map>

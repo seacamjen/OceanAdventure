@@ -18,6 +18,7 @@ import com.mygdx.sharkattack.SharkAttack;
 import com.mygdx.sharkattack.scenes.Hud;
 import com.mygdx.sharkattack.sprites.Shark;
 import com.mygdx.sharkattack.tools.B2WorldCreator;
+import com.mygdx.sharkattack.tools.WorldContactListener;
 
 public class PlayScreen implements Screen {
     private SharkAttack game;
@@ -56,6 +57,8 @@ public class PlayScreen implements Screen {
 
 
         player = new Shark(world, this);
+
+        world.setContactListener(new WorldContactListener());
     }
 
     public TextureAtlas getAtlas() {

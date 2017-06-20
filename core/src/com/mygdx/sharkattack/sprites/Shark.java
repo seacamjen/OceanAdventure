@@ -16,11 +16,11 @@ public class Shark extends Sprite {
     private TextureRegion sharkStill;
 
     public Shark(World world, PlayScreen screen) {
-        super(screen.getAtlas().findRegion("Rest_to_right_sheet"));
+        super(screen.getAtlas().findRegion("a_swim_to_right_sheet_small"));
         this.world = world;
         defineShark();
-        sharkStill = new TextureRegion(getTexture(), 452, 0, 904, 1615);
-        setBounds(0, 0, 1615 / SharkAttack.PPM, 904 / SharkAttack.PPM);
+        sharkStill = new TextureRegion(getTexture(), 0, 0, 128, 128);
+        setBounds(0, 0, 128 / SharkAttack.PPM, 128 / SharkAttack.PPM);
         setRegion(sharkStill);
     }
 
@@ -36,7 +36,7 @@ public class Shark extends Sprite {
 
         FixtureDef fdef = new FixtureDef();
         CircleShape shape = new CircleShape();
-        shape.setRadius(5 / SharkAttack.PPM);
+        shape.setRadius(40 / SharkAttack.PPM);
 
         fdef.shape = shape;
         b2body.createFixture(fdef);

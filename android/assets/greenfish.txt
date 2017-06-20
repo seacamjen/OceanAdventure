@@ -1,0 +1,33 @@
+greenfish.png
+size: 1536, 256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+a_swim_to_right_sheet_small
+  rotate: false
+  xy: 0, 0
+  size: 768, 128
+  orig: 768, 128
+  offset: 0, 0
+  index: -1
+b_rest_to_right_sheet_small
+  rotate: false
+  xy: 768, 0
+  size: 768, 128
+  orig: 768, 128
+  offset: 0, 0
+  index: -1
+c_swim_to_left_sheet_small
+  rotate: false
+  xy: 0, 128
+  size: 768, 128
+  orig: 768, 128
+  offset: 0, 0
+  index: -1
+d_rest_to_left_sheet_small
+  rotate: false
+  xy: 768, 128
+  size: 768, 128
+  orig: 768, 128
+  offset: 0, 0
+  index: -1

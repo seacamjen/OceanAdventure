@@ -1,18 +1,14 @@
 package com.mygdx.sharkattack;
 
-import com.badlogic.gdx.ApplicationAdapter;
 import com.badlogic.gdx.Game;
-import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.graphics.GL20;
-import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.mygdx.sharkattack.screens.PlayScreen;
 
 public class SharkAttack extends Game {
 	public SpriteBatch batch;
-	public static final int V_WIDTH = 400;
-	public static final int V_HEIGHT = 208;
-	public static float PPM = 100;
+	public static final int V_WIDTH = 1000;
+	public static final int V_HEIGHT = 750;
+	public static float PPM = 250;
 	
 	@Override
 	public void create () {

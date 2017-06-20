@@ -26,7 +26,6 @@ public class Shark extends Sprite {
     private Animation<TextureRegion> sharkRest;
     private Animation<TextureRegion> sharkRestLeft;
     private float stateTimer;
-    private boolean swimRight;
 
     public Shark(World world, PlayScreen screen) {
         super(screen.getAtlas().findRegion("a_swim_to_right_sheet_small"));
@@ -34,7 +33,6 @@ public class Shark extends Sprite {
         currentState = State.WADING;
         previousState = State.WADING;
         stateTimer = 0;
-        swimRight = true;
 
         //swimming animation right
         Array<TextureRegion> frames = new Array<TextureRegion>();
@@ -132,7 +130,7 @@ public class Shark extends Sprite {
         b2body.createFixture(fdef);
 
         EdgeShape mouth = new EdgeShape();
-        mouth.set(new Vector2(-2 / SharkAttack.PPM, 40 / SharkAttack.PPM), new Vector2(2 / SharkAttack.PPM, 40 / SharkAttack.PPM));
+        mouth.set(new Vector2(40 / SharkAttack.PPM, 30 / SharkAttack.PPM), new Vector2(40 / SharkAttack.PPM, -30 / SharkAttack.PPM));
         fdef.shape = mouth;
         fdef.isSensor = true;
 

@@ -15,7 +15,7 @@ import com.mygdx.sharkattack.SharkAttack;
 import com.mygdx.sharkattack.screens.PlayScreen;
 
 public class Shark extends Sprite {
-    public enum State { SWIMMINGRIGHT, RESTINGRIGHT, SWIMMINGLEFT, RESTINGLEFT, WADING};
+    public enum State { SWIMMINGRIGHT, RESTINGRIGHT, SWIMMINGLEFT, RESTINGLEFT, WADING, DEAD};
     public State currentState;
     public State previousState;
     public World world;
@@ -25,7 +25,9 @@ public class Shark extends Sprite {
     private Animation<TextureRegion> sharkSwimLeft;
     private Animation<TextureRegion> sharkRest;
     private Animation<TextureRegion> sharkRestLeft;
+
     private float stateTimer;
+    private boolean sharkIsDead;
 
     public Shark(World world, PlayScreen screen) {
         super(screen.getAtlas().findRegion("a_swim_to_right_sheet_small"));
@@ -60,6 +62,8 @@ public class Shark extends Sprite {
         frames.clear();
 
         sharkStill = new TextureRegion(getTexture(), 0, 0, 128, 128);
+        frames.clear();
+
 
         defineShark();
         setBounds(0, 0, 128 / SharkAttack.PPM, 128 / SharkAttack.PPM);
@@ -76,6 +80,9 @@ public class Shark extends Sprite {
 
         TextureRegion region;
         switch (currentState){
+            case DEAD:
+                region = sharkStill;
+                break;
             case SWIMMINGRIGHT:
                 region = sharkSwim.getKeyFrame(stateTimer, true);
                         break;
@@ -100,7 +107,9 @@ public class Shark extends Sprite {
     }
 
     public State getState() {
-        if(b2body.getLinearVelocity().y > 0 && b2body.getLinearVelocity().x > 0)
+        if(sharkIsDead)
+            return State.DEAD;
+        else if(b2body.getLinearVelocity().y > 0 && b2body.getLinearVelocity().x > 0)
             return State.SWIMMINGRIGHT;
         else if (b2body.getLinearVelocity().y > 0 && b2body.getLinearVelocity().x < 0)
             return State.SWIMMINGLEFT;

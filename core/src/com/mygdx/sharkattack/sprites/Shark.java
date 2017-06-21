@@ -126,6 +126,10 @@ public class Shark extends Sprite {
         CircleShape shape = new CircleShape();
         shape.setRadius(40 / SharkAttack.PPM);
 
+
+        fdef.filter.categoryBits = SharkAttack.SHARK_BIT;
+        fdef.filter.maskBits = SharkAttack.DEFAULT_BIT | SharkAttack.NET_BIT | SharkAttack.PLANT_BIT;
+
         fdef.shape = shape;
         b2body.createFixture(fdef);
 

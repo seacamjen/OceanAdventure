@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" tiledversion="1.0.1" orientation="orthogonal" renderorder="right-down" width="300" height="70" tilewidth="16" tileheight="16" nextobjectid="36">
+ <tileset firstgid="1" source="mapstuff.tsx"/>
+ <tileset firstgid="1703" source="boat.tsx"/>
+ <layer name="background" width="300" height="70">
+  <data encoding="base64" compression="zlib">
+   eJzt0zdOA1EUBVAjhLdBWAthF14fqXcidKSeVLMRXgESspDA4v83f4ZTnMKy7HvvG3uyMRpNCjoej0Yn4TSchfNx2e/Pzqmdl72jq8wh3jGjQ8aukhktPId1TKPfLMzDIiwr9c3KqZ2XvaOrzCHeMaNDxq6SGS08h3XcRL/bcBfuw0Olvlk5tfOyd3SVOcQ7ZnTI2FUyo4XnsI7H6PcUnsNLeK3UNyundl72jq4yh3jHjA4Zu0pm1O67vTV8O2E37DXQpfSmrnvY16+uffV54/1/4CAchqMGupTe1HUP+/rVta9Wb7z6n/76umV96Dg0rf02svu0tL3rW2R72wQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKhrGmZhHhZhGS7CZbj6eL91fe8/tB1D2vRd/647/ea+P93+ek1/+WzJ73oHESMWIA==
+  </data>
+ </layer>
+ <layer name="graphics" width="300" height="70">
+  <data encoding="base64" compression="zlib">
+   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
+  </data>
+ </layer>
+ <objectgroup name="plants">
+  <object id="7" x="457" y="985" width="15" height="119"/>
+  <object id="8" x="698" y="841" width="14" height="261"/>
+  <object id="9" x="954" y="953" width="13" height="149"/>
+  <object id="10" x="1114" y="729" width="14" height="374"/>
+  <object id="11" x="1337" y="953" width="14" height="150"/>
+  <object id="12" x="2107" y="825" width="11" height="277"/>
+  <object id="13" x="2536" y="793" width="15" height="310"/>
+  <object id="14" x="3082" y="858" width="12" height="244"/>
+  <object id="15" x="3626" y="1034" width="13" height="69"/>
+  <object id="16" x="3787" y="857" width="12" height="244"/>
+  <object id="17" x="3913" y="969" width="13" height="132"/>
+  <object id="18" x="4027" y="1033" width="12" height="69"/>
+  <object id="19" x="4409" y="955" width="15" height="147"/>
+  <object id="20" x="4569" y="1034" width="14" height="68"/>
+ </objectgroup>
+ <objectgroup name="ground">
+  <object id="2" x="1" y="1103" width="4799" height="16"/>
+  <object id="3" x="2" y="1" width="5" height="1116"/>
+  <object id="5" x="0" y="53" width="4798" height="12"/>
+  <object id="6" x="4791" y="49" width="8" height="1052"/>
+ </objectgroup>
+ <objectgroup name="finish">
+  <object id="21" x="4723" y="66" width="27" height="1038"/>
+ </objectgroup>
+ <objectgroup name="obstacle">
+  <object id="22" x="208.333" y="848.333" width="15" height="15.3333"/>
+  <object id="23" x="224.5" y="848.333" width="15" height="15.3333"/>
+  <object id="24" x="240.5" y="848.333" width="15" height="15.3333"/>
+  <object id="25" x="192.5" y="832.333" width="15" height="15.3333"/>
+  <object id="26" x="208.167" y="832.667" width="15" height="15.3333"/>
+  <object id="27" x="224.5" y="832.667" width="15" height="15.3333"/>
+  <object id="28" x="256.5" y="864.667" width="15" height="15.3333"/>
+  <object id="29" x="255.833" y="848.333" width="15" height="15.3333"/>
+  <object id="30" x="272.167" y="849" width="15" height="15.3333"/>
+  <object id="31" x="272.5" y="864.667" width="15" height="15.3333"/>
+  <object id="32" x="288.167" y="864.333" width="15" height="15.3333"/>
+  <object id="33" x="288.167" y="848.333" width="15" height="15.3333"/>
+  <object id="34" x="304.5" y="848.667" width="15" height="15.3333"/>
+  <object id="35" x="304.5" y="864.667" width="15" height="15.3333"/>
+ </objectgroup>
+</map>

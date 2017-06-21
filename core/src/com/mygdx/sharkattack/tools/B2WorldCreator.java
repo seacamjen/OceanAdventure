@@ -40,6 +40,15 @@ public class B2WorldCreator {
             Rectangle rect = ((RectangleMapObject) object).getRectangle();
 
             new Plants(world, map, rect);
+
+//            bdef.type = BodyDef.BodyType.StaticBody;
+//            bdef.position.set((rect.getX() + rect.getWidth() / 2) / SharkAttack.PPM, (rect.getY() + rect.getHeight() / 2) / SharkAttack.PPM);
+//
+//            body = world.createBody(bdef);
+//
+//            shape.setAsBox(rect.getWidth() / 2 / SharkAttack.PPM, rect.getHeight() / 2 / SharkAttack.PPM);
+//            fdef.shape = shape;
+//            body.createFixture(fdef);
         }
         //finish
 

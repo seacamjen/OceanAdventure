@@ -45,7 +45,7 @@ public class PlayScreen implements Screen {
         hud = new Hud(game.batch);
 
         maploader = new TmxMapLoader();
-        map = maploader.load("oceanfloor.tmx");
+        map = maploader.load("newocean.tmx");
         renderer = new OrthogonalTiledMapRenderer(map, 1 / SharkAttack.PPM);
         gamecam.position.set(gamePort.getWorldWidth() / 2, gamePort.getWorldHeight() / 2, 0);
 

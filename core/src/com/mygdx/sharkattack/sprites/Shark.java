@@ -9,6 +9,7 @@ import com.badlogic.gdx.physics.box2d.BodyDef;
 import com.badlogic.gdx.physics.box2d.CircleShape;
 import com.badlogic.gdx.physics.box2d.EdgeShape;
 import com.badlogic.gdx.physics.box2d.FixtureDef;
+import com.badlogic.gdx.physics.box2d.PolygonShape;
 import com.badlogic.gdx.physics.box2d.World;
 import com.badlogic.gdx.utils.Array;
 import com.mygdx.sharkattack.SharkAttack;
@@ -142,10 +143,15 @@ public class Shark extends Sprite {
         fdef.shape = shape;
         b2body.createFixture(fdef);
 
-        EdgeShape mouth = new EdgeShape();
-        mouth.set(new Vector2(40 / SharkAttack.PPM, 30 / SharkAttack.PPM), new Vector2(40 / SharkAttack.PPM, -30 / SharkAttack.PPM));
-        fdef.shape = mouth;
+        CircleShape fish = new CircleShape();
+        fish.setRadius(40 / SharkAttack.PPM);
+        fdef.shape = fish;
         fdef.isSensor = true;
+
+//        EdgeShape mouth = new EdgeShape();
+//        mouth.set(new Vector2(40 / SharkAttack.PPM, 30 / SharkAttack.PPM), new Vector2(40 / SharkAttack.PPM, -30 / SharkAttack.PPM));
+//        fdef.shape = mouth;
+//        fdef.isSensor = true;
 
         b2body.createFixture(fdef).setUserData("mouth");
     }

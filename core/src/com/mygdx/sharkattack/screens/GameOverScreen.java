@@ -23,7 +23,7 @@ public class GameOverScreen implements Screen {
 
     public GameOverScreen(Game game) {
         this.game = game;
-        viewport = new FitViewport(SharkAttack.V_WIDTH, SharkAttack.V_HEIGHT, new OrthographicCamera());
+        viewport = new FitViewport(400, 275, new OrthographicCamera());
         stage = new Stage(viewport, ((SharkAttack) game).batch);
 
         Label.LabelStyle font = new Label.LabelStyle(new BitmapFont(), Color.CORAL);

@@ -13,6 +13,7 @@ import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.badlogic.gdx.utils.viewport.FitViewport;
 import com.badlogic.gdx.utils.viewport.Viewport;
 import com.mygdx.sharkattack.SharkAttack;
+import com.mygdx.sharkattack.scenes.Hud;
 
 public class GameOverScreen implements Screen {
     private Viewport viewport;
@@ -33,8 +34,13 @@ public class GameOverScreen implements Screen {
 
         Label gameOverLabel = new Label("GAME OVER", font);
         Label playAgainLabel = new Label("Play Again", font);
+        Label scoreLabel = new Label("Score", font);
 
         table.add(gameOverLabel).expandX();
+        table.row();
+        table.add(scoreLabel).expandX();
+        table.row();
+        table.add(Hud.scoreLabel).expandX();
         table.row();
         table.add(playAgainLabel).expandX().padTop(10f);
 

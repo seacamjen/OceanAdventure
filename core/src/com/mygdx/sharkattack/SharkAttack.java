@@ -6,8 +6,8 @@ import com.mygdx.sharkattack.screens.PlayScreen;
 
 public class SharkAttack extends Game {
 	public SpriteBatch batch;
-	public static final int V_WIDTH = 1000;
-	public static final int V_HEIGHT = 750;
+	public static final int V_WIDTH = 900;
+	public static final int V_HEIGHT = 650;
 	public static float PPM = 250;
 
 	public static final short DEFAULT_BIT = 1;

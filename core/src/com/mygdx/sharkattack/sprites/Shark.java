@@ -1,18 +1,17 @@
 package com.mygdx.sharkattack.sprites;
 
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.Animation;
 import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
-import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.Body;
 import com.badlogic.gdx.physics.box2d.BodyDef;
 import com.badlogic.gdx.physics.box2d.CircleShape;
-import com.badlogic.gdx.physics.box2d.EdgeShape;
 import com.badlogic.gdx.physics.box2d.FixtureDef;
-import com.badlogic.gdx.physics.box2d.PolygonShape;
 import com.badlogic.gdx.physics.box2d.World;
 import com.badlogic.gdx.utils.Array;
 import com.mygdx.sharkattack.SharkAttack;
+import com.mygdx.sharkattack.scenes.Hud;
 import com.mygdx.sharkattack.screens.PlayScreen;
 
 public class Shark extends Sprite {
@@ -29,6 +28,7 @@ public class Shark extends Sprite {
 
     private float stateTimer;
     private boolean sharkIsDead;
+    private static boolean timeUp;
 
     public Shark(World world, PlayScreen screen) {
         super(screen.getAtlas().findRegion("a_swim_to_right_sheet_small"));
@@ -81,12 +81,9 @@ public class Shark extends Sprite {
 
         TextureRegion region;
         switch (currentState){
-            case DEAD:
-                region = sharkStill;
-                break;
             case SWIMMINGRIGHT:
                 region = sharkSwim.getKeyFrame(stateTimer, true);
-                        break;
+                break;
             case RESTINGRIGHT:
                 region = sharkRest.getKeyFrame(stateTimer, true);
                 break;
@@ -108,7 +105,7 @@ public class Shark extends Sprite {
     }
 
     public State getState() {
-        if(sharkIsDead)
+        if(timeUp())
             return State.DEAD;
         else if(b2body.getLinearVelocity().y > 0 && b2body.getLinearVelocity().x > 0)
             return State.SWIMMINGRIGHT;
@@ -154,5 +151,12 @@ public class Shark extends Sprite {
 //        fdef.isSensor = true;
 
         b2body.createFixture(fdef).setUserData("mouth");
+    }
+
+    public boolean timeUp() {
+        if (Hud.worldTimer <= 0) {
+            sharkIsDead = true;
+        }
+        return sharkIsDead;
     }
 }

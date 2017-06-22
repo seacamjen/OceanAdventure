@@ -31,7 +31,7 @@ public class Hud implements Disposable{
     private Label sharkLabel;
 
     public Hud (SpriteBatch sb) {
-        worldTimer = 5;
+        worldTimer = 20;
         timeCount = 0;
         score = 0;
 
@@ -43,7 +43,7 @@ public class Hud implements Disposable{
         table.setFillParent(true);
 
         countdownLabel = new Label(String.format("%03d", worldTimer), new Label.LabelStyle(new BitmapFont(), Color.WHITE));
-        scoreLabel = new Label(String.format("%06d", worldTimer), new Label.LabelStyle(new BitmapFont(), Color.WHITE));
+        scoreLabel = new Label(String.format("%05d", worldTimer), new Label.LabelStyle(new BitmapFont(), Color.WHITE));
         timeLabel = new Label("TIME", new Label.LabelStyle(new BitmapFont(), Color.WHITE));
         levelLabel = new Label("1", new Label.LabelStyle(new BitmapFont(), Color.WHITE));
         worldLabel = new Label("LEVEL", new Label.LabelStyle(new BitmapFont(), Color.WHITE));

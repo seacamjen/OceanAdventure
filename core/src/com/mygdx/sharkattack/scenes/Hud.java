@@ -1,6 +1,7 @@
 package com.mygdx.sharkattack.scenes;
 
 
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
@@ -12,12 +13,13 @@ import com.badlogic.gdx.utils.Disposable;
 import com.badlogic.gdx.utils.viewport.FitViewport;
 import com.badlogic.gdx.utils.viewport.Viewport;
 import com.mygdx.sharkattack.SharkAttack;
+import com.mygdx.sharkattack.sprites.Shark;
 
 public class Hud implements Disposable{
     public Stage stage;
     private Viewport viewport;
 
-    private Integer worldTimer;
+    public static Integer worldTimer;
     private float timeCount;
     private static Integer score;
 
@@ -29,7 +31,7 @@ public class Hud implements Disposable{
     private Label sharkLabel;
 
     public Hud (SpriteBatch sb) {
-        worldTimer = 300;
+        worldTimer = 5;
         timeCount = 0;
         score = 0;
 

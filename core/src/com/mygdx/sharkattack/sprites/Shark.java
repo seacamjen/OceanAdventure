@@ -145,11 +145,6 @@ public class Shark extends Sprite {
         fdef.shape = fish;
         fdef.isSensor = true;
 
-//        EdgeShape mouth = new EdgeShape();
-//        mouth.set(new Vector2(40 / SharkAttack.PPM, 30 / SharkAttack.PPM), new Vector2(40 / SharkAttack.PPM, -30 / SharkAttack.PPM));
-//        fdef.shape = mouth;
-//        fdef.isSensor = true;
-
         b2body.createFixture(fdef).setUserData("mouth");
     }
 
